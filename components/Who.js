@@ -22,11 +22,8 @@ export const Who = () => {
     },
   ];
   return (
-    <div
-      className="w-full h-screen bg-blue-900 px-16 flex flex-col items-center"
-      style={{ marginTop: -3 }}
-    >
-      <img src="/assets/logowhite.svg" alt="" className="h-1/4" />
+    <div className="w-full bg-blue-900 px-32 py-20 flex flex-col items-center">
+      <img src="/assets/logowhite.svg" alt="" className="h-36" />
       <p className="w-1/2 text-white py-3 text-center">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
         blanditiis alias repellendus veniam nihil quo minus fuga nostrum quaerat
@@ -37,6 +34,18 @@ export const Who = () => {
         {mission.map((m, x) => (
           <Card mission={m} key={x} />
         ))}
+      </div>
+      <div className="flex flex-row pt-20 justify-center items-center">
+        <div className="bg-white rounded-full h-64 w-64 p-5">
+          <img src="/assets/vision.svg" alt="" className="h-full" />
+        </div>
+        <div className="flex flex-col p-10">
+          <h1 className="text-6xl py-4 text-yellow-500">Vision</h1>
+          <p className="text-white">
+            All eligible Lebanese males and females to be up-to-date with CRC
+            screening.
+          </p>
+        </div>
       </div>
     </div>
   );

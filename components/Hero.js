@@ -7,7 +7,7 @@ export const Hero = () => {
       <div className={"w-full p-0 h-screen " + `${styles.backgroundImage}`}>
         {" "}
       </div>
-      <div className="absolute w-full top-1/3 flex flex-col items-start pl-10 ">
+      <div className="absolute w-full top-1/3 flex flex-col items-start pl-28 pt-10 ">
         <h1 className={"text-4xl py-4 text-white " + `${styles.textShadow}`}>
           Screening can save a life.
         </h1>
