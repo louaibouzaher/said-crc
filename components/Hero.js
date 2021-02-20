@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Background from "../public/assets/bgHero.jpg";
 import styles from "../styles/Hero.module.css";
 export const Hero = () => {
   return (
