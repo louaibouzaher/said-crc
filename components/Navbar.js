@@ -12,7 +12,12 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center flex-wrap bg-white p-3 fixed w-full shadow-md">
+      <nav
+        className={
+          "flex items-center flex-wrap bg-white p-3 fixed w-full shadow-md" +
+          `${styles.top}`
+        }
+      >
         <Link href="/">
           <a
             className="inline-flex items-center mr-4 "

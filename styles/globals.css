@@ -7,14 +7,14 @@
   src: local("interBold"), url(../public/fonts/Inter-Bold.ttf);
 }
 @font-face {
-  font-family: "inter";
-  src: local("inter"), url(/public/fonts/Inter-Light.ttf);
+  font-family: "secondary";
+  src: local("secondary"), url(/public/fonts/Inter-Light.ttf);
 }
 
-html,
-body {
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -22,6 +22,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.layout .Home_container__1EcsU {
+  padding: 0 !important;
 }

@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         sans: ["InterBold","Arial", "sans-serif"],
         interBold: ["InterBold"],
-        inter: ["inter"],
+        secondary: ["secondary"],
       },
     },
   },
