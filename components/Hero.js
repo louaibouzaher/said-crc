@@ -23,7 +23,7 @@ export const Hero = () => {
         <Link href="/about">
           <a
             className={
-              "lg:inline-flex lg:w-auto px-6 py-2 rounded font-bold items-center justify-center bg-blue-900 hover:bg-yellow-600 text-white hover:text-gray-900 "
+              "lg:inline-flex lg:w-auto px-6 py-2 rounded font-bold items-center justify-center bg-blue-900 hover:bg-yellow-500 text-white hover:text-gray-900 "
             }
           >
             Learn More{" "}
