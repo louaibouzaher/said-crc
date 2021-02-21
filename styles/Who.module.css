@@ -1,0 +1,14 @@
+.visionBg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 250px;
+  width: 250px;
+  background-image: url("../public/assets/vision.jpg");
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
