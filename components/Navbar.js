@@ -105,7 +105,7 @@ export const Navbar = () => {
               <a
                 onClick={() => setselected(null)}
                 className={
-                  "lg:inline-flex lg:w-auto mx-2 px-6 py-2 rounded font-bold items-center justify-center bg-blue-900 hover:bg-yellow-500 text-white hover:text-gray-900 "
+                  "lg:inline-flex lg:w-auto sm:mx-2 mx-5 px-6 py-2 rounded font-bold items-center justify-center bg-blue-900 hover:bg-yellow-500 text-white hover:text-gray-900 "
                 }
               >
                 Get Involved

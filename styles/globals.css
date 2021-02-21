@@ -10,7 +10,10 @@
   font-family: "secondary";
   src: local("secondary"), url(/public/fonts/Inter-Light.ttf);
 }
-
+html {
+  margin: 0 !important;
+  width: 100%;
+}
 * {
   padding: 0;
   margin: 0;
@@ -24,4 +27,6 @@ a {
 
 .layout .Home_container__1EcsU {
   padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
 }

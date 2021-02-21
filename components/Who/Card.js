@@ -1,7 +1,7 @@
 import styles from "../../styles/Card.module.css";
 export const Card = ({ mission }) => {
   return (
-    <div className="bg-white flex flex-1 flex-grow flex-col justify-start items-center p-4 py-6 m-2 shadow-xl rounded-md">
+    <div className="bg-white flex flex-1 flex-grow flex-col justify-start items-center p-4 py-6 my-2 mx-6 shadow-xl rounded-md">
       <div
         className={"my-3 rounded-full " + styles.cardBg}
         style={{ backgroundImage: "url(" + mission.src + ")" }}

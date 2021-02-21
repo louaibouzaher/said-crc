@@ -24,25 +24,29 @@ export const Who = () => {
     },
   ];
   return (
-    <div className="w-full bg-blue-900 px-32 py-20 flex flex-col items-center">
+    <div className="w-full bg-blue-900 sm:px-32 px-4 py-20 flex flex-col items-center">
       <img src="/assets/white.svg" alt="" className="h-36" />
-      <p className="w-1/2 text-white py-4 text-center">
+      <p className="sm:w-1/2 text-white py-4 px-2 text-center">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
         blanditiis alias repellendus veniam nihil quo minus fuga nostrum quaerat
         impedit, tempora voluptas ut possimus dolorum expedita distinctio iure
         esse? Odit.
       </p>
-      <div className="description flex flex-row justify-center items-stretch ">
+      <div className="description flex sm:flex-row flex-col justify-center items-stretch ">
         {mission.map((m, x) => (
           <Card mission={m} key={x} />
         ))}
       </div>
-      <div className="flex flex-row pt-20 justify-center items-center">
+      <div className="flex sm:flex-row flex-col pt-20 justify-center items-center">
         <div className={"rounded-full " + styles.visionBg}></div>
 
-        <div className="flex flex-col p-10">
-          <h1 className="text-6xl py-4 text-yellow-500">Vision</h1>
-          <p className="text-white">
+        <div className="flex flex-col sm:p-10 p-2">
+          <h1 className="text-6xl pt-4 text-white z-10">Vision.</h1>
+          <div
+            className="bg-yellow-500 h-4 w-52 shadow-md"
+            style={{ marginTop: -17, zIndex: 1 }}
+          ></div>
+          <p className="text-white py-3">
             All eligible Lebanese males and females to be up-to-date with CRC
             screening.
           </p>
