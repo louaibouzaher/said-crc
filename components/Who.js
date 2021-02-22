@@ -38,13 +38,13 @@ export const Who = () => {
         ))}
       </div>
       <div className="flex sm:flex-row flex-col pt-20 justify-center items-center">
-        <div className={"rounded-full " + styles.visionBg}></div>
+        <div className={"shadow-2xl rounded-full " + styles.visionBg}></div>
 
         <div className="flex flex-col sm:p-10 p-2">
           <h1 className="text-6xl pt-4 text-white z-10">Vision.</h1>
           <div
-            className="bg-yellow-500 h-4 w-52 shadow-md"
-            style={{ marginTop: -17, zIndex: 1 }}
+            className="bg-yellow-500 h-6 w-52 shadow-md"
+            style={{ marginTop: -20, zIndex: 1 }}
           ></div>
           <p className="text-white py-3">
             All eligible Lebanese males and females to be up-to-date with CRC
