@@ -12,3 +12,28 @@
   filter: grayscale(1);
 }
 
+.enterRight {
+  animation-duration: 2s;
+}
+
+@media (min-width: 600px) {
+  .enterRight {
+    animation-name: enterRight;
+  }
+}
+@keyframes enterRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  25% {
+    opacity: 1;
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

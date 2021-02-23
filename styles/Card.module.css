@@ -1,13 +1,37 @@
 .cardBg {
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    height: 170px;
-    width: 170px;
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-    filter: grayscale(1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 170px;
+  width: 170px;
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.delayà {
+  animation-delay: às;
+}
+.delay1 {
+  animation-delay: 1s;
+}
+.delay2 {
+  animation-delay: 2s;
+}
+.cardAnimation {
+  animation-name: card;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes card {
+  0% {
+    transform: translateY(10px);
   }
-  
+  100% {
+    transform: translateY(0deg);
+  }
+}

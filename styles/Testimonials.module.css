@@ -1,0 +1,39 @@
+.enterRight {
+  animation-duration: 2s;
+}
+
+@media (min-width: 600px) {
+  .enterRight {
+    animation-name: enterRight;
+  }
+}
+@keyframes enterRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.enterLeft {
+  animation-duration: 2s;
+}
+
+@media (min-width: 600px) {
+  .enterLeft {
+    animation-name: enterLeft;
+  }
+}
+@keyframes enterLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
