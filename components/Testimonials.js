@@ -38,7 +38,7 @@ export const Testimonials = () => {
   const ref3 = useRef();
   return (
     <div className="w-full p-10 flex flex-col items-start relative">
-      <h1 className="sm:text-6xl text-4xl sm:px-5 px-2 py-4 text-white tracking-tight bg-yellow-500 rounded-md shadow-lg">
+      <h1 className="sm:text-6xl text-4xl sm:px-5 px-2 py-4 text-white tracking-tight bg-yellow-500 rounded-md shadow-lg ">
         <span className="z-20"> They said about us</span>
       </h1>
       <img
@@ -48,7 +48,10 @@ export const Testimonials = () => {
       />
       {/* Testimonials */}
       <div className="w-full flex flex-col justify-center items-center">
-        <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 1)}>
+        <VisibilitySensor
+          partialVisibility={true}
+          onChange={(isVisible) => onChange(isVisible, 1)}
+        >
           <div
             ref={ref1}
             className="sm:w-3/4 flex sm:flex-row flex-col justify-center items-center sm:px-10  pt-10"
@@ -71,7 +74,10 @@ export const Testimonials = () => {
             </div>
           </div>
         </VisibilitySensor>
-        <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 2)}>
+        <VisibilitySensor
+          partialVisibility={true}
+          onChange={(isVisible) => onChange(isVisible, 2)}
+        >
           <div
             ref={ref2}
             className="sm:w-3/4 flex sm:flex-row flex-col justify-center items-center sm:px-10  pt-10"
@@ -94,7 +100,10 @@ export const Testimonials = () => {
             </div>
           </div>
         </VisibilitySensor>{" "}
-        <VisibilitySensor onChange={(isVisible) => onChange(isVisible, 3)}>
+        <VisibilitySensor
+          partialVisibility={true}
+          onChange={(isVisible) => onChange(isVisible, 3)}
+        >
           <div
             ref={ref3}
             className="sm:w-3/4 flex sm:flex-row flex-col justify-center items-center sm:px-10  pt-10"

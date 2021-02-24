@@ -33,11 +33,19 @@ export const Who = () => {
       ref.current.classList.remove(styles.enterRight);
     }
   };
+  const onChangeRef1 = (isVisible) => {
+    if (isVisible) {
+      ref1.current.classList.add(styles.enterRight);
+    } else {
+      ref1.current.classList.remove(styles.enterRight);
+    }
+  };
   const ref = useRef();
+  const ref1 = useRef();
 
   return (
     <div className="w-full bg-blue-900 sm:px-32 px-4 py-20 flex flex-col items-center overflow-hidden">
-      <VisibilitySensor onChange={onChange}>
+      <VisibilitySensor partialVisibility={true} onChange={onChange}>
         <img ref={ref} src="/assets/white.svg" alt="" className="h-36" />
       </VisibilitySensor>
       <p className="sm:w-1/2 text-white py-4 px-2 text-center">
@@ -60,11 +68,14 @@ export const Who = () => {
         <div className={"shadow-2xl rounded-full " + styles.visionBg}></div>
 
         <div className="flex flex-col sm:p-10 p-2">
-          <h1 className="text-6xl pt-4 text-white z-10">Vision.</h1>
-          <div
-            className="bg-yellow-500 h-6 w-52 shadow-md"
-            style={{ marginTop: -20, zIndex: 1 }}
-          ></div>
+          <h1 className="text-6xl pt-4 text-white z-20">Vision.</h1>
+          <VisibilitySensor partialVisibility={true} onChange={onChangeRef1}>
+            <div
+              ref={ref1}
+              className="bg-yellow-500 h-6 w-52 shadow-md z-10"
+              style={{ marginTop: -20 }}
+            ></div>
+          </VisibilitySensor>
           <p className="text-white py-3">
             All eligible Lebanese males and females to be up-to-date with CRC
             screening.
