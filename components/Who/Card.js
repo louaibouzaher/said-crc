@@ -4,8 +4,7 @@ export const Card = ({ mission, d }) => {
     <div
       className={
         " bg-white flex flex-1 flex-grow flex-col justify-start items-center \
-        p-4 py-6 my-2 mx-6 shadow-xl rounded-md transform hover:scale-105 hover:-translate-y-3 \
-        transition-all hover:bg-yellow-500 "
+        p-4 py-6 my-2 mx-6 shadow-xl rounded-md transform hover:scale-105 hover:-translate-y-3 transition-all "
       }
     >
       <div

@@ -1,7 +1,9 @@
 import { React, useEffect, useRef, useState } from "react";
 import { Card } from "./Who/Card";
 import styles from "../styles/Who.module.css";
+import styles1 from "../styles/Testimonials.module.css";
 import VisibilitySensor from "react-visibility-sensor";
+import { Statistics } from "./Who/Statistics";
 export const Who = () => {
   const mission = [
     {
@@ -26,6 +28,23 @@ export const Who = () => {
       src: "/assets/support.jpg",
     },
   ];
+  const section = [
+    {
+      name: "Events",
+      number: 15,
+      id: 1,
+    },
+    {
+      name: "Participants",
+      number: 300,
+      id: 2,
+    },
+    {
+      name: "Volunteers",
+      number: 40,
+      id: 3,
+    },
+  ];
   const onChange = (isVisible) => {
     if (isVisible) {
       ref.current.classList.add(styles.enterRight);
@@ -36,12 +55,15 @@ export const Who = () => {
   const onChangeRef1 = (isVisible) => {
     if (isVisible) {
       ref1.current.classList.add(styles.enterRight);
+      ref2.current.classList.add(styles1.enterLeft);
     } else {
       ref1.current.classList.remove(styles.enterRight);
+      ref2.current.classList.remove(styles1.enterLeft);
     }
   };
   const ref = useRef();
   const ref1 = useRef();
+  const ref2 = useRef();
 
   return (
     <div className="w-full bg-blue-900 sm:px-32 px-4 py-20 flex flex-col items-center overflow-hidden">
@@ -56,8 +78,7 @@ export const Who = () => {
       </p>
       <div
         className={
-          "description flex sm:flex-row flex-col justify-center items-stretch " +
-          styles.cardAnimation
+          "description flex sm:flex-row flex-col justify-center items-stretch"
         }
       >
         {mission.map((m) => (
@@ -65,7 +86,10 @@ export const Who = () => {
         ))}
       </div>
       <div className="flex sm:flex-row flex-col pt-20 justify-center items-center">
-        <div className={"shadow-2xl rounded-full " + styles.visionBg}></div>
+        <div
+          ref={ref2}
+          className={styles.visionBg + " shadow-2xl rounded-full "}
+        ></div>
 
         <div className="flex flex-col sm:p-10 p-2">
           <h1 className="text-6xl pt-4 text-white z-20">Vision.</h1>
@@ -81,6 +105,15 @@ export const Who = () => {
             screening.
           </p>
         </div>
+      </div>
+      <div
+        className={
+          "w-full flex sm:flex-row flex-col justify-center items-stretch py-10"
+        }
+      >
+        {section.map((s) => (
+          <Statistics name={s.name} number={s.number} key={s.id} />
+        ))}
       </div>
     </div>
   );
