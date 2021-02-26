@@ -23,7 +23,7 @@ export const Hero = () => {
           fuga <br />
           reprehenderit consequuntur saepe. Eligendi nihil necessitatibus
           numquam <br />
-          nulla doloremque hic iusto iure! <br />
+          nulla doloremque hic iusto iure!<br />
         </p>
         <Link href="/about">
           <a
