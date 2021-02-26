@@ -37,17 +37,19 @@ export const Testimonials = () => {
   const ref2 = useRef();
   const ref3 = useRef();
   return (
-    <div className="w-full p-10 flex flex-col items-start relative">
-      <h1 className="sm:text-6xl text-4xl sm:px-5 px-2 py-4 text-white tracking-tight bg-yellow-500 rounded-md shadow-lg ">
-        <span className="z-20"> They said about us</span>
-      </h1>
-      <img
-        src="/assets/quote.svg"
-        alt=""
-        className="sm:h-32 h-20 absolute right-4 top-32 sm:top-20 sm:right-10"
-      />
+    <div className="w-full p-10 flex flex-col items-start">
+      <div className="relative">
+        <h1 className="sm:text-6xl text-4xl sm:px-5 px-2 py-6 text-white tracking-tight bg-yellow-500 rounded-md shadow-lg ">
+          They said about us.
+        </h1>
+        <img
+          src="/assets/quote.svg"
+          alt=""
+          className={"sm:h-32 h-20 absolute top-16 -right-10 " + styles.shake}
+        />
+      </div>
       {/* Testimonials */}
-      <div className="w-full flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center my-6">
         <VisibilitySensor
           partialVisibility={true}
           onChange={(isVisible) => onChange(isVisible, 1)}

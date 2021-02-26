@@ -1,0 +1,109 @@
+import React, { useState } from "react";
+import SocialMedia from "./SocialMedia";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faMapMarkerAlt,
+  faPhoneAlt,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faMapMarkerAlt, faPhoneAlt, faEnvelope);
+export const Footer = () => {
+  const [Contact, setContact] = useState({
+    email: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setContact((p) => {
+      return { ...p, [e.target.name]: e.target.value };
+    });
+  };
+  const handleSend = () => {
+    //   if (Contact.email != "" && Contact.message != "") {
+    //     const messagesRef = database.ref("contactmessages");
+    //     const newMessage = messagesRef.push();
+    //     newMessage.set({
+    //       email: Contact.email,
+    //       message: Contact.message,
+    //       time: JSON.stringify(new Date()),
+    //     });
+    //     alert("Message sent🚀 Thank you!");
+    //   } else {
+    //     alert("Please provide an email and a message before sending!");
+    //   }
+  };
+
+  return (
+    <div
+      className={
+        "w-full bg-blue-900 flex flex-col justify-center items-center pt-10 -m-6"
+      }
+    >
+      <div className="w-full flex flex-row justify-center items-center my-5">
+        <div className="flex-grow flex flex-col justify-center p-5 pl-10">
+          <div className="flex flex-row items-center">
+            <FontAwesomeIcon
+              icon={faMapMarkerAlt}
+              size="2x"
+              className=" cursor-pointer  text-white m-3"
+            />
+            <div className="text-white">Beirut - Lebanon</div>
+          </div>
+          <div className="flex flex-row items-center">
+            <FontAwesomeIcon
+              icon={faPhoneAlt}
+              size="2x"
+              className="m-3 cursor-pointer  text-white"
+            />
+            <div className="text-white">+961 3 458 476</div>
+          </div>
+          <div className="flex flex-row items-center">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              size="2x"
+              className="m-3 cursor-pointer  text-white"
+            />
+            <div className="text-white">hananimer@saidcrc.org</div>
+          </div>
+        </div>
+        <div className="flex-grow flex flex-col justify-start p-5">
+          <div className="text-white text-4xl">Contact Us</div>
+
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            className="focus:border-white bg-gray-900 w-5/6 sm:w-2/3 mt-4 rounded-md h-10 p-2 text-white"
+            onChange={(e) => handleChange(e)}
+          />
+          <textarea
+            type="text"
+            cols="40"
+            rows="5"
+            name="message"
+            placeholder="Message"
+            style={{ resize: "none" }}
+            className="focus:border-white bg-gray-900 w-full sm:w-5/6 my-2 rounded-md p-2 text-white"
+            onChange={(e) => handleChange(e)}
+          />
+          <button
+            className={
+              "shadow-xl lg:inline-flex lg:w-36 px-6 py-2 rounded font-bold items-center justify-center transition-all duration-500\
+               border-2 border-solid border-yellow-500 hover:border-white hover:bg-blue-900 bg-yellow-500 hover:text-white text-gray-900 "
+            }
+            onClick={handleSend}
+          >
+            Send{" "}
+          </button>
+        </div>
+      </div>
+      <div className="text-white text-2xl">
+        {" "}
+        Follow us on
+        <span className="text-yellow-500"> Social Media.</span>
+      </div>
+      <SocialMedia />
+      <div className="text-white text-sm py-5"> SAID NGO - 2021</div>
+    </div>
+  );
+};
