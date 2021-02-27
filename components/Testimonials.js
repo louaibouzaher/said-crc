@@ -45,7 +45,7 @@ export const Testimonials = () => {
         <img
           src="/assets/quote.svg"
           alt=""
-          className={"sm:h-32 h-20 absolute top-16 -right-10 " + styles.shake}
+          className={"sm:h-32 h-20 absolute sm:top-16 sm:-right-10 -right-3 top-10 " + styles.shake}
         />
       </div>
       {/* Testimonials */}

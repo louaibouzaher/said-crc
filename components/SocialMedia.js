@@ -17,7 +17,7 @@ const SocialMedia = () => {
   const linkedin = "https://www.linkedin.com/in/said-ngo-358780120";
   const twitter = "https://twitter.com/SAIDNG0";
   return (
-    <div className="flex max-w-sm m-5 mt-7 flex-row ">
+    <div className="flex max-w-sm m-2 flex-row ">
       <a href={fb} target="_blank">
         <FontAwesomeIcon
           icon={["fab", "facebook"]}

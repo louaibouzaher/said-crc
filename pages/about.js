@@ -1,12 +1,16 @@
-
+import Head from "next/head";
+import { Founders } from "../components/Founders";
+import { AboutSection } from "../components/About";
 
 export default function About() {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
-      pariatur, laudantium iusto voluptatibus minus laboriosam libero,
-      blanditiis at quod tempora, sunt sapiente? Distinctio nobis temporibus
-      optio culpa dolorem delectus ab!
-    </div>
+    <>
+      <Head>
+        <title>About</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <AboutSection />
+      <Founders />
+    </>
   );
 }

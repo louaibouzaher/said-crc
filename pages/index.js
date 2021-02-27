@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { Testimonials } from "../components/Testimonials";
 import { Who } from "../components/Who";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <Who />
       <Testimonials />
-      <Footer />
     </div>
   );
 }

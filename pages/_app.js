@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -11,8 +12,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <Navbar />
       <div className="layout" style={{ padding: 0, margin: 0 }}>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </div>
+      <Footer />
     </>
   );
 }

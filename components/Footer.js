@@ -36,10 +36,10 @@ export const Footer = () => {
   return (
     <div
       className={
-        "w-full bg-blue-900 flex flex-col justify-center items-center pt-10 -m-6"
+        "w-full bg-blue-900 flex flex-col justify-center items-center pt-2 "
       }
     >
-      <div className="w-full flex flex-row justify-center items-center my-5">
+      <div className="w-full flex sm:flex-row flex-col justify-center items-center my-5">
         <div className="flex-grow flex flex-col justify-center p-5 pl-10">
           <div className="flex flex-row items-center">
             <FontAwesomeIcon
@@ -97,13 +97,13 @@ export const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="text-white text-2xl">
+      <div className="text-white text-xl">
         {" "}
         Follow us on
         <span className="text-yellow-500"> Social Media.</span>
       </div>
       <SocialMedia />
-      <div className="text-white text-sm py-5"> SAID NGO - 2021</div>
+      <div className="text-white text-sm py-2"> SAID NGO - 2021</div>
     </div>
   );
 };

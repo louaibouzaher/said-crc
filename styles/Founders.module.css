@@ -1,0 +1,26 @@
+/* 
+from: { opacity: 0, transform: "translate3d(100%,0,0)" },
+enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
+leave: { opacity: 0, transform: "translate3d(-50%,0,0)" }, */
+.slideshow::-webkit-scrollbar {
+  display: none;
+}
+.slideshow > div {
+  animation-duration: 5s;
+}
+
+@media (min-width: 600px) {
+  .slideshow > div {
+    animation-name: enterRight;
+  }
+}
+@keyframes enterRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0);
+  }
+}
