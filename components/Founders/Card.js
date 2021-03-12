@@ -7,8 +7,8 @@ export const Card = ({ p }) => {
   return (
     <div
       className={
-        "w-1/4 bg-white flex flex-col justify-start items-center \
-        px-10 py-6 my-2 mx-6 shadow-xl rounded-md transform hover:scale-105 hover:-translate-y-3 transition-all "
+        "sm:w-1/4 w-full bg-white flex flex-col justify-start items-center \
+        px-10 py-6 my-2 sm:mx-6 shadow-xl rounded-md transform hover:scale-105 hover:-translate-y-3 transition-all "
       }
     >
       <div

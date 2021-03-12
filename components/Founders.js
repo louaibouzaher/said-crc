@@ -49,10 +49,12 @@ export const Founders = () => {
   ];
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="text-4xl p-5 text-blue-900">Meet The Founders.</div>
+      <div className="sm:text-6xl  text-3xl px-4 pt-10 text-blue-900">
+        Meet The Founders.
+      </div>
       <div
         className={
-          "w-full p-10 flex flex-row justify-center items-stretch flex-wrap  " +
+          "w-full p-10 flex sm:flex-row flex-col justify-center items-stretch flex-wrap  " +
           styles.slideshow
         }
       >

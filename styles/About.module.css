@@ -1,0 +1,33 @@
+.fallenImage3 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fallFromAbove;
+  animation-delay: 3s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+.fallenImage2 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fallFromAbove;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+.fallenImage1 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fallFromAbove;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fallFromAbove {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(12deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
