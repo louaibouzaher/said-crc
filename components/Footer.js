@@ -106,4 +106,5 @@ export const Footer = () => {
       <div className="text-white text-sm py-2"> SAID NGO - 2021</div>
     </div>
   );
+  // TODO: Add partners logos
 };
