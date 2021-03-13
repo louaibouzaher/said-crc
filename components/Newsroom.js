@@ -1,7 +1,5 @@
-import React, { useRef } from "react";
 import styles from "../styles/Newsroom.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPhotoVideo,
   faNewspaper,
@@ -9,9 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const NewsroomHero = () => {
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
   const handleHover = (e) => {
     e.target.classList.add("bg-white");
     e.target.children[0].classList.add(styles.text);

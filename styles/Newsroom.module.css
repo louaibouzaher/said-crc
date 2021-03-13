@@ -32,7 +32,7 @@
 
 @keyframes vectorAnimation {
   from {
-  }
+  } 
   to {
     transform: translate(0px, 20px) scale(4);
   }
