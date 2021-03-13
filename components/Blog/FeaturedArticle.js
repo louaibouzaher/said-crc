@@ -31,7 +31,7 @@ export const FeaturedArticle = () => {
             nisi blanditiis culpa vitae debitis.
           </p>
           <Link href="/">
-            <div className="py-8 flex flex-row justify-end items-center">
+            <div className="py-8 flex flex-row justify-start items-center">
               <FontAwesomeIcon
                 icon={faAngleDoubleRight}
                 className="text-white "

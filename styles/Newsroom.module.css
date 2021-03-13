@@ -1,0 +1,39 @@
+.text {
+  animation-name: textAnimation;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.textReverse {
+  animation-name: textAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+.vector {
+  animation-name: vectorAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.vectorReverse {
+  animation-name: vectorAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes textAnimation {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, -20px);
+    color: #1e3a8a;
+  }
+}
+
+@keyframes vectorAnimation {
+  from {
+  }
+  to {
+    transform: translate(0px, 20px) scale(4);
+  }
+}

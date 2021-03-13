@@ -27,9 +27,9 @@ export const ArticlePreview = ({ a }) => {
       <div className="p-3 text-sm text-gray-700">
         {a.content.substring(0, 100)}
       </div>
-      <div className="px-2 flex flex-row justify-center items-center">
-        <FontAwesomeIcon icon={faAngleDoubleRight} className="text-blue-900" />
-        <div className="text-blue-900 p-1 "> Learn More </div>
+      <div className="px-2 flex flex-row justify-center items-center bg-blue-900 shadow-2xl rounded-lg">
+        <FontAwesomeIcon icon={faAngleDoubleRight} className="text-white" />
+        <div className="text-white p-1 "> Learn More </div>
       </div>
     </div>
   );

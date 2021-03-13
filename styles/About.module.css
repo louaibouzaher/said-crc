@@ -2,7 +2,7 @@
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fallFromAbove;
-  animation-delay: 3s;
+  animation-delay: 4s;
   animation-duration: 1.5s;
   animation-timing-function: ease-in;
 }
@@ -10,13 +10,14 @@
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: fallFromAbove;
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
   animation-duration: 1.5s;
   animation-timing-function: ease-in;
 }
 .fallenImage1 {
   opacity: 0;
   animation-fill-mode: forwards;
+  animation-delay: 1.5s;
   animation-name: fallFromAbove;
   animation-duration: 1.5s;
   animation-timing-function: ease-in;
