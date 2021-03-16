@@ -34,7 +34,7 @@ export const Testimonials = () => {
   ];
   return (
     <div
-      className="w-full h-screen  py-24 flex flex-row items-center justify-center bg-blue-900"
+      className="w-full h-screen py-24 flex flex-row items-center justify-center bg-blue-900"
       id="testimonials"
     >
       <div className="w-1/3 p-10 text-8xl text-white">
