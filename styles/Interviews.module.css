@@ -1,22 +1,52 @@
-.goLeft {
-  width: 8215%;
-  position: relative;
-  transition-duration: 50s;
-  transform: translate3d(-2440px, 0px, 0px);
-  transition-timing-function: linear;
-  /* position: relative;
-  animation-name: goLeftAnimation;
-  animation-duration: 20s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; */
+.enterLeft {
+  animation-name: enterLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
-
-@keyframes goLeftAnimation {
+@keyframes enterLeft {
   from {
-    right: 0%;
+    transform: translate(-200px, 0px);
   }
   to {
-    right: -100%;
+    transform: translate(0px, 0px);
+  }
+}
+.enterRight {
+  animation-name: enterRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes enterRight {
+  from {
+    transform: translate(200px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+.enterTop {
+  animation-name: enterTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes enterTop {
+  from {
+    transform: translate(0px, -200px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+.enterBottom {
+  animation-name: enterBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes enterBottom {
+  from {
+    transform: translate(0px, 100px);
+  }
+  to {
+    transform: translate(0px, 0px);
   }
 }

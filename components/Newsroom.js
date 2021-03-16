@@ -29,7 +29,7 @@ export const NewsroomHero = () => {
             styles.bubble
           }
         >
-          <div className="text-white text-3xl">Interviews</div>{" "}
+          <a href="#interviews" className="text-white text-3xl">Interviews</a>{" "}
           <FontAwesomeIcon
             icon={faPhotoVideo}
             className="transform translate-y-96 text-blue-900"
