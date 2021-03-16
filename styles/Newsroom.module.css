@@ -32,8 +32,37 @@
 
 @keyframes vectorAnimation {
   from {
-  } 
+  }
   to {
     transform: translate(0px, 20px) scale(4);
+  }
+}
+
+@keyframes hover {
+  0% {
+  }
+  100% {
+    filter: grayscale(100%);
+  }
+}
+
+.filter:hover {
+  animation-name: hover;
+  animation-duration: 1ms;
+  animation-fill-mode: forwards;
+}
+
+.playButton {
+  animation-name: enterBottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes enterBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 35px;
   }
 }

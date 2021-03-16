@@ -50,7 +50,7 @@ export const NewsroomHero = () => {
           onMouseEnter={handleHover}
           className="overflow-hidden cursor-pointer w-44 h-44 rounded-full shadow-2xl flex flex-col justify-center items-center transform -translate-x-3 translate-y-36 hover:scale-105 transition-all"
         >
-          <div className="text-white text-xl pt-4">Testimonials</div>
+          <a href="#testimonials" className="text-white text-xl pt-4">Testimonials</a>
           <FontAwesomeIcon
             icon={faMicrophoneAlt}
             size="sm"

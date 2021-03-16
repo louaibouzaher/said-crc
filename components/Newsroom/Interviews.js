@@ -36,7 +36,7 @@ export const Interviews = () => {
   const ref4 = useRef();
   return (
     <div
-      className="flex justify-center items-center bg-blue-900 w-full"
+      className="flex py-10 justify-center items-center bg-blue-900 w-full"
       id="interviews"
     >
       <div className="p-10 w-2/3 grid grid-cols-2 grid-rows-4 gap-5 bg-blue-900">
