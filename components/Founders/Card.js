@@ -15,8 +15,8 @@ export const Card = ({ p }) => {
         className={"my-3 mx-10 rounded-full shadow-lg " + styles.cardBg}
         style={{ backgroundImage: "url(" + p.picture + ")" }}
       ></div>
-      <h1 className="text-2xl text-blue-900 mt-3">{p.name}</h1>
-      <h1 className="text-xl text-blue-900 mb-3">{p.profession}</h1>
+      <h1 className="text-2xl text-blue-900 mt-3 text-center">{p.name}</h1>
+      <h1 className="text-xl text-blue-900 mb-3 text-center">{p.profession}</h1>
       <p className="text-sm text-gray-900">{p.description}</p>
     </div>
   );

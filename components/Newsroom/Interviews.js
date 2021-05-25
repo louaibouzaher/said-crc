@@ -5,27 +5,17 @@ import VisibilitySensor from "react-visibility-sensor";
 export const Interviews = () => {
   const interviews = [
     {
-      video: "https://www.youtube.com/watch?v=QHb_Brp0WnI&t=12s",
+      video: "https://www.youtube.com/embed/QHb_Brp0WnI",
       title: "Random title",
       description: "Random Text",
     },
     {
-      video: "https://www.youtube.com/watch?v=QHb_Brp0WnI&t=12s",
+      video: "https://www.youtube.com/embed/zDZj1oNVXQY",
       title: "Random title",
       description: "Random Text",
     },
     {
-      video: "https://www.youtube.com/watch?v=QHb_Brp0WnI&t=12s",
-      title: "Random title",
-      description: "Random Text",
-    },
-    {
-      video: "https://www.youtube.com/watch?v=QHb_Brp0WnI&t=12s",
-      title: "Random title",
-      description: "Random Text",
-    },
-    {
-      video: "https://www.youtube.com/watch?v=QHb_Brp0WnI&t=12s",
+      video: "https://www.youtube.com/embed/q3VUltqMX1U",
       title: "Random title",
       description: "Random Text",
     },
@@ -33,13 +23,13 @@ export const Interviews = () => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
-  const ref4 = useRef();
+
   return (
     <div
-      className="flex py-10 justify-center items-center bg-blue-900 w-full"
+      className="flex py-10 flex-col justify-center items-center bg-blue-900 w-full"
       id="interviews"
     >
-      <div className="p-10 w-2/3 grid grid-cols-2 grid-rows-4 gap-5 bg-blue-900">
+      <div className="p-10 w-2/3 grid grid-cols-2 grid-rows-3 gap-5 bg-blue-900">
         <VisibilitySensor
           partialVisibility={true}
           onChange={(i) => {
@@ -54,7 +44,7 @@ export const Interviews = () => {
               "transform flex justify-center items-center row-start-1 row-end-3 bg-white rounded-md p-4 shadow-2xl "
             }
           >
-            <Video />
+            <Video v={interviews[0]} />
           </div>
         </VisibilitySensor>
         <VisibilitySensor
@@ -71,7 +61,7 @@ export const Interviews = () => {
               " h-48 flex justify-center  items-center bg-white rounded-md p-4 shadow-2xl "
             }
           >
-            <Video />
+            <Video v={interviews[1]} />
           </div>
         </VisibilitySensor>
         <div className="flex justify-center  items-center row-start-2 row-end-4 bg-blue-900 rounded-md p-4  shadow-2xl">
@@ -96,38 +86,32 @@ export const Interviews = () => {
             ref={ref3}
             className="h-48 flex justify-center  items-center bg-white rounded-md p-4 shadow-2xl"
           >
-            <Video />
-          </div>
-        </VisibilitySensor>
-        <VisibilitySensor
-          intervalDelay={700}
-          partialVisibility={true}
-          onChange={(i) => {
-            i
-              ? ref4.current.classList.add(styles.enterBottom)
-              : ref4.current.classList.remove(styles.enterBottom);
-          }}
-        >
-          <div
-            ref={ref4}
-            className="h-48 flex justify-center  items-center  bg-white rounded-md p-4 shadow-2xl col-start-1 col-end-3 "
-          >
-            <Video />
+            <Video v={interviews[2]} />
           </div>
         </VisibilitySensor>
       </div>
+      <a
+        href="https://www.youtube.com/channel/UC9Q2nKW-RYy5M5T2fSPAyfA"
+        target="_blank"
+        className={
+          "shadow-xl lg:inline-flex px-6 py-2 rounded font-bold items-center justify-center transition-all duration-500\
+               border-2 border-solid border-yellow-500 hover:border-white hover:bg-blue-900 bg-yellow-500 hover:text-white text-gray-900 "
+        }
+      >
+        Check our YouTube Channel{" "}
+      </a>
     </div>
   );
 };
 
-const Video = () => {
+const Video = ({ v }) => {
   return (
     <iframe
       className="w-full h-full"
-      src="https://www.youtube.com/embed/QHb_Brp0WnI"
+      src={v.video}
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   );
 };

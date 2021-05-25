@@ -67,7 +67,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex-grow flex flex-col justify-start p-5">
-          <div className="text-white text-4xl">Contact Us</div>
+          <div className="text-white text-4xl">Contact us</div>
 
           <input
             type="email"

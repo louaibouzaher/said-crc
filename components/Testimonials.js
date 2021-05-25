@@ -45,7 +45,10 @@ export const Testimonials = () => {
         <img
           src="/assets/quote.svg"
           alt=""
-          className={"sm:h-32 h-20 absolute sm:top-16 sm:-right-10 -right-3 top-10 " + styles.shake}
+          className={
+            "sm:h-32 h-20 absolute sm:top-16 sm:-right-10 -right-3 top-10 " +
+            styles.shake
+          }
         />
       </div>
       {/* Testimonials */}
@@ -59,19 +62,19 @@ export const Testimonials = () => {
             className="sm:w-3/4 flex sm:flex-row flex-col justify-center items-center sm:px-10  pt-10"
           >
             <img
-              src="/assets/testimonial1.jpg"
+              src="/assets/testimonials/1.jpg"
               alt=""
               className="sm:w-1/5 w-1/2 rounded-full shadow-2xl"
             />
             <div className="p-10">
               <p className="text-blue-900">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum recusandae necessitatibus voluptate, vero minima
-                saepe sequi sint assumenda ipsum corporis eligendi mollitia
-                dicta quidem dignissimos est error a. Possimus, beatae?
+                "Although the colon cancer treatment journey could be a little
+                rough, having someone (a survivor) to talk to, will make it so
+                much easier. That is why I will dedicate as much time as needed
+                with @SAID NGO to anyone whose journey I can make easier"
               </p>
               <br />
-              <i className="text-gray-900">Name of Person</i>
+              <i className="text-gray-900">Hala Habib</i>
               <p className="text-gray-900 text-sm">Role/Title</p>
             </div>
           </div>
@@ -85,16 +88,17 @@ export const Testimonials = () => {
             className="sm:w-3/4 flex sm:flex-row flex-col justify-center items-center sm:px-10  pt-10"
           >
             <img
-              src="/assets/testimonial1.jpg"
+              src="/assets/testimonials/2.jpg"
               alt=""
               className="sm:w-1/5 w-1/2 rounded-full shadow-2xl sm:order-2"
             />
             <div className="p-10 sm:order-1">
               <p className="text-blue-900">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum recusandae necessitatibus voluptate, vero minima
-                saepe sequi sint assumenda ipsum corporis eligendi mollitia
-                dicta quidem dignissimos est error a. Possimus, beatae?
+                “I am blessed to be a part of the family of SAID NGO. I passed
+                through cancer and I know the importance of support to cancer
+                patients, which is one of the pillars of the mission of SAID
+                NGO. Spreading awareness and offering support with them, gives
+                me great satisfaction.”
               </p>
               <br />
               <i className="text-gray-900">Name of Person</i>
@@ -111,16 +115,15 @@ export const Testimonials = () => {
             className="sm:w-3/4 flex sm:flex-row flex-col justify-center items-center sm:px-10  pt-10"
           >
             <img
-              src="/assets/testimonial1.jpg"
+              src="/assets/testimonials/3.jpg"
               alt=""
               className="sm:w-1/5 w-1/2 rounded-full shadow-2xl"
             />
             <div className="p-10">
               <p className="text-blue-900">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum recusandae necessitatibus voluptate, vero minima
-                saepe sequi sint assumenda ipsum corporis eligendi mollitia
-                dicta quidem dignissimos est error a. Possimus, beatae?
+                “Cancer may have started the fight but with the support of SAID
+                NGO and the strength behind each smile we hold for others we
+                will conquer it”
               </p>
               <br />
               <i className="text-gray-900">Name of Person</i>

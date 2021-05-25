@@ -9,22 +9,19 @@ export const Who = () => {
     {
       id: 0,
       title: "Awarness",
-      text:
-        "Increase awareness about CRC and CRC screening. Improve detection through decreasing barriers to participation in CRC screening.",
+      text: "Increase awareness about CRC and CRC screening. Improve detection through decreasing barriers to participation in CRC screening.",
       src: "/assets/awarness.jpg",
     },
     {
       id: 1,
       title: "Advocacy",
-      text:
-        "Involve doctors and general practitioners in advising patients about the necessity of early screening starting at the age of 45. Advocate with stakeholders to establish an organized CRC screening program in Lebanon while assuring access to high quality screening.",
+      text: "Involve doctors and general practitioners in advising patients about the necessity of early screening starting at the age of 45. Advocate with stakeholders to establish an organized CRC screening program in Lebanon while assuring access to high quality screening.",
       src: "/assets/advocacy.jpg",
     },
     {
       id: 2,
       title: "Support",
-      text:
-        "SAID NGO team members help in directing people to reliable laboratories for FIT and taking appointments to those who ask for help in that matter. SAID NGO survivors share their experience with compassion, knowledge and understanding via support groups to colorectal patients, and caregivers.",
+      text: "SAID NGO team members help in directing people to reliable laboratories for FIT and taking appointments to those who ask for help in that matter. SAID NGO survivors share their experience with compassion, knowledge and understanding via support groups to colorectal patients, and caregivers.",
       src: "/assets/support.jpg",
     },
   ];
@@ -71,10 +68,7 @@ export const Who = () => {
         <img ref={ref} src="/assets/white.svg" alt="" className="h-36" />
       </VisibilitySensor>
       <p className="sm:w-1/2 text-white py-4 px-2 text-center">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-        blanditiis alias repellendus veniam nihil quo minus fuga nostrum quaerat
-        impedit, tempora voluptas ut possimus dolorum expedita distinctio iure
-        esse? Odit.
+        The mission of SAID NGO is threefold: awareness, advocacy and support.
       </p>
       <div
         className={
