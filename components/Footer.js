@@ -45,7 +45,7 @@ export const Footer = () => {
             <FontAwesomeIcon
               icon={faMapMarkerAlt}
               size="2x"
-              className=" cursor-pointer  text-white m-3"
+              className="text-white m-3"
             />
             <div className="text-white">Beirut - Lebanon</div>
           </div>
@@ -53,7 +53,7 @@ export const Footer = () => {
             <FontAwesomeIcon
               icon={faPhoneAlt}
               size="2x"
-              className="m-3 cursor-pointer  text-white"
+              className="m-3  text-white"
             />
             <div className="text-white">+961 3 458 476</div>
           </div>
@@ -61,7 +61,7 @@ export const Footer = () => {
             <FontAwesomeIcon
               icon={faEnvelope}
               size="2x"
-              className="m-3 cursor-pointer  text-white"
+              className="m-3  text-white"
             />
             <div className="text-white">hananimer@saidcrc.org</div>
           </div>

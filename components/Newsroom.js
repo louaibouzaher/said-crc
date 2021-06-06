@@ -14,7 +14,6 @@ export const NewsroomHero = () => {
       e.target.children[1].classList.add(styles.vector);
     }
   };
-
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-blue-900">
       <div className="w-full flex flex-col justify-center items-center">
