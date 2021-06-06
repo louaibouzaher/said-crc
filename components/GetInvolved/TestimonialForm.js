@@ -64,11 +64,11 @@ export const TestimonialForm = () => {
         {(props) => (
           <form
             onSubmit={props.handleSubmit}
-            className="flex flex-col w-1/2 p-6"
+            className="flex flex-col sm:w-1/2 w-full sm:p-6 p-2"
           >
             <label htmlFor="firstName">First Name</label>
             <input
-              className="p-1 w-1/2 h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
+              className="sm:p-1 p-0 sm:w-1/2 w-full h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
               id="firstName"
               name="firstName"
               type="text"
@@ -80,7 +80,7 @@ export const TestimonialForm = () => {
             ) : null}
             <label htmlFor="lastName">Last Name</label>
             <input
-              className="p-1 w-1/2 h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
+              className="sm:p-1 p-0 sm:w-1/2 w-full h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
               id="lastName"
               name="lastName"
               type="text"
@@ -93,7 +93,7 @@ export const TestimonialForm = () => {
 
             <label htmlFor="email">Email Address</label>
             <input
-              className="p-1 w-1/2 h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
+              className="sm:p-1 p-0 sm:w-1/2 w-full h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
               id="email"
               name="email"
               type="email"
@@ -104,16 +104,16 @@ export const TestimonialForm = () => {
               <FormAlert text={props.errors.email} />
             ) : null}
             <label htmlFor="phoneNumber">Phone Number</label>
-            <div className="flex items-baseline">
+            <div className="flex sm:flex-row flex-col items-baseline">
               <Select
-                className="w-1/4 mr-1 border-solid border-2 border-blue-900 rounded-md"
+                className="sm:w-1/4 w-1/2 mr-1 border-solid border-2 border-blue-900 rounded-md"
                 options={codes}
                 onChange={(a) => {
                   setCountry(a.value);
                 }}
               />
               <input
-                className="p-1 w-1/2 h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
+                className="sm:p-1 p-0 sm:w-1/2 w-full h-10 my-1 border-solid border-2 border-blue-900 rounded-md"
                 id="phoneNumber"
                 name="phoneNumber"
                 type="text"
@@ -126,7 +126,7 @@ export const TestimonialForm = () => {
             ) : null}
             <label htmlFor="story">Tell us about your story</label>
             <textarea
-              className="p-1 w-3/4 h-52 my-1 border-solid border-2 border-blue-900 rounded-md"
+              className="sm:p-1 p-0 sm:w-3/4 w-full h-52 my-1 border-solid border-2 border-blue-900 rounded-md"
               id="story"
               name="story"
               onChange={props.handleChange}
@@ -172,7 +172,7 @@ export const TestimonialForm = () => {
             <button
               type="submit"
               className={
-                "w-1/5 my-4 px-6 py-2 rounded font-bold items-center justify-center bg-blue-900 hover:bg-yellow-500 text-white hover:text-gray-900 "
+                "sm:w-1/5 w-1/2 my-4 px-6 py-2 rounded font-bold items-center justify-center bg-blue-900 hover:bg-yellow-500 text-white hover:text-gray-900 "
               }
             >
               Submit
@@ -186,7 +186,7 @@ export const TestimonialForm = () => {
 
 const FormAlert = ({ text }) => {
   return (
-    <div className="w-1/2 p-2 m-1 rounded-lg border-solid border-2 border-red-900 bg-red-200 text-red-900">
+    <div className="sm:w-1/2 w-full p-2 my-1 rounded-lg border-solid border-2 border-red-900 bg-red-200 text-red-900">
       {text}
     </div>
   );

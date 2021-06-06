@@ -57,15 +57,22 @@ export const Articles = () => {
   return (
     <div
       id="articles"
-      className="py-20 w-full flex flex-col justify-center items-center bg-blue-900"
+      className="py-20 sm:px-0 px-4 w-full flex flex-col justify-center items-center bg-blue-900"
     >
-        <div className="text-6xl text-yellow-500 "> Articles about us. </div>
-        <div className="my-4 text-2xl text-white "> Different newspapers/magazines wrote about our work, check these articles for more info. </div>
+      <div className="text-6xl text-yellow-500 text-center">
+        {" "}
+        Articles about us.{" "}
+      </div>
+      <div className="my-4 text-2xl text-white text-center">
+        {" "}
+        {
+          "Different newspapers & magazines wrote about our work, check these articles for more information."
+        }{" "}
+      </div>
       <div className="w-10/12 flex justify-center items-stretch flex-wrap">
         {articles.map((a) => {
           return <Article content={a} key={a.id} />;
         })}
-
       </div>
     </div>
   );
@@ -73,7 +80,7 @@ export const Articles = () => {
 
 const Article = ({ content }) => {
   return (
-    <div className="w-1/4 flex flex-col justify-start  items-start bg-blue-900 rounded-2xl p-4 m-4 shadow-2xl border-white border-solid border-2">
+    <div className="sm:w-1/4 w-full flex flex-col justify-start  items-start bg-blue-900 rounded-2xl p-4 m-4 shadow-2xl border-white border-solid border-2">
       <h1 className="text-2xl text-white mt-3 text-center">{content.title}</h1>
       <img src={content.image} className="my-2 rounded-md" />
       <p className="text-sm text-white">{content.description}</p>

@@ -26,10 +26,10 @@ export const Interviews = () => {
 
   return (
     <div
-      className="flex py-10 flex-col justify-center items-center bg-blue-900 w-full"
+      className="flex py-10 flex-col justify-center items-center bg-blue-900 w-full overflow-hidden"
       id="interviews"
     >
-      <div className="p-10 w-2/3 grid grid-cols-2 grid-rows-3 gap-5 bg-blue-900">
+      <div className="p-10 sm:w-2/3 w-full sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-5 bg-blue-900">
         <VisibilitySensor
           partialVisibility={true}
           onChange={(i) => {
@@ -41,7 +41,7 @@ export const Interviews = () => {
           <div
             ref={ref1}
             className={
-              "transform flex justify-center items-center row-start-1 row-end-3 bg-white rounded-md p-4 shadow-2xl "
+              "sm:my-0 my-3 transform flex justify-center items-center row-start-1 row-end-3 bg-white rounded-md p-4 shadow-2xl "
             }
           >
             <Video v={interviews[0]} />
@@ -58,7 +58,7 @@ export const Interviews = () => {
           <div
             ref={ref2}
             className={
-              " h-48 flex justify-center  items-center bg-white rounded-md p-4 shadow-2xl "
+              "sm:my-0 my-3 h-48 flex justify-center  items-center bg-white rounded-md p-4 shadow-2xl "
             }
           >
             <Video v={interviews[1]} />
@@ -66,7 +66,7 @@ export const Interviews = () => {
         </VisibilitySensor>
         <div className="flex justify-center  items-center row-start-2 row-end-4 bg-blue-900 rounded-md p-4  shadow-2xl">
           <div className="p-10 w-full flex flex-col justify-center items-center">
-            <div className="text-white text-4xl py-6">Check Our Interviews</div>
+            <div className="text-white text-4xl py-6 text-center">Check Our Interviews</div>
             <div className="text-white text-lg text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
               nostrum eum ipsa culpa molestias quibusdam fugiat labore
@@ -84,7 +84,7 @@ export const Interviews = () => {
         >
           <div
             ref={ref3}
-            className="h-48 flex justify-center  items-center bg-white rounded-md p-4 shadow-2xl"
+            className="sm:my-0 my-3 h-48 flex justify-center  items-center bg-white rounded-md p-4 shadow-2xl"
           >
             <Video v={interviews[2]} />
           </div>

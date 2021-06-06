@@ -15,19 +15,19 @@ export const NewsroomHero = () => {
     }
   };
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-blue-900">
+    <div className="sm:h-screen flex flex-col justify-center items-center bg-blue-900 overflow-hidden">
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="text-white text-8xl pt-10">Media</div>
-        <div className="text-white text-xl ">
+        <div className="text-white sm:text-8xl text-4xl pt-32">Media</div>
+        <div className="text-white sm:text-xl text-sm  text-center">
           You can find all our media presence in this section
         </div>
       </div>
-      <div className="flex flex-row p-10">
+      <div className="flex sm:flex-row flex-col items-center p-10">
         <a
           href="#interviews"
           onMouseEnter={handleHover}
           className={
-            "bubble overflow-hidden cursor-pointer w-52 h-52 rounded-full shadow-2xl flex flex-col justify-center items-center transform translate-x-3 translate-y-32 hover:scale-105 transition-all "
+            "sm:my-0 my-4 bubble overflow-hidden cursor-pointer w-52 h-52 rounded-full shadow-2xl flex flex-col justify-center items-center transform sm:translate-x-3 sm:translate-y-32 hover:scale-105 transition-all "
           }
         >
           <div className="text-white text-3xl">Interviews</div>{" "}
@@ -39,7 +39,7 @@ export const NewsroomHero = () => {
         <a
           href="#articles"
           onMouseEnter={handleHover}
-          className="bubble overflow-hidden cursor-pointer w-64 h-64 rounded-full shadow-2xl flex flex-col justify-center items-center transform hover:scale-105 transition-all"
+          className="sm:my-0 my-4 bubble overflow-hidden cursor-pointer w-64 h-64 rounded-full shadow-2xl flex flex-col justify-center items-center transform hover:scale-105 transition-all"
         >
           <div className="text-white text-4xl">Articles</div>
           <FontAwesomeIcon
@@ -51,7 +51,7 @@ export const NewsroomHero = () => {
         <a
           href="#testimonials"
           onMouseEnter={handleHover}
-          className="bubble overflow-hidden cursor-pointer w-44 h-44 rounded-full shadow-2xl flex flex-col justify-center items-center transform -translate-x-3 translate-y-36 hover:scale-105 transition-all"
+          className="sm:my-0 my-4 bubble overflow-hidden cursor-pointer w-44 h-44 rounded-full shadow-2xl flex flex-col justify-center items-center transform sm:-translate-x-3 sm:translate-y-36 hover:scale-105 transition-all"
         >
           <div href="#testimonials" className="text-white text-xl pt-4">
             Testimonials
