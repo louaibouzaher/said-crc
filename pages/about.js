@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>About | SAID NGO</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AboutSection />

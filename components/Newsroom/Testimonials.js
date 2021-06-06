@@ -7,28 +7,28 @@ export const Testimonials = () => {
       name: "person1",
       description:
         "Random Text Random Text Random Text Random Text Random Text ",
-      audioFile: "/audio/person1.mp3",
+      link: "/audio/person1.mp3",
       image: "/assets/testimonial1.jpg",
     },
     {
       name: "person2",
       description:
         "Random Text Random Text Random Text Random Text Random Text ",
-      audioFile: "/audio/person1.mp3",
+      link: "/audio/person1.mp3",
       image: "/assets/testimonial1.jpg",
     },
     {
       name: "person3",
       description:
         "Random Text Random Text Random Text Random Text Random Text ",
-      audioFile: "/audio/person1.mp3",
+      link: "/audio/person1.mp3",
       image: "/assets/testimonial1.jpg",
     },
     {
       name: "person4",
       description:
         "Random Text Random Text Random Text Random Text Random Text ",
-      audioFile: "/audio/person1.mp3",
+      link: "/audio/person1.mp3",
       image: "/assets/testimonial1.jpg",
     },
   ];
