@@ -25,7 +25,7 @@ export default function Blog() {
         </div>
         <FeaturedArticle />
       </div>
-      <div className="w-full text-center sm:text-6xl text-4xl font-bold bg-yellow-500 sm:pt-10 text-white sm:p-10 z-10 my-2 p-4">
+      <div className="w-full text-center sm:text-6xl text-4xl font-bold bg-yellow-500 sm:pt-10 text-white sm:p-10 z-10 my-16  p-4">
         Read More.
       </div>
       <AllArticles />

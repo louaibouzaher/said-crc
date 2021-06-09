@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "../styles/Testimonials.module.css";
 import VisibilitySensor from "react-visibility-sensor";
-
+import axios from "axios";
+import { api } from "../configVars";
 export const Testimonials = () => {
   const onChange = (isVisible, n) => {
     switch (n) {
@@ -36,6 +37,11 @@ export const Testimonials = () => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
+  useEffect(() => {
+    axios.get(api + "/testimonials").then((response) => {
+      console.log(response);
+    });
+  }, []);
   return (
     <div className="w-full p-10 flex flex-col items-start">
       <div className="relative">

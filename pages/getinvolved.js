@@ -3,6 +3,7 @@ import Head from "next/head";
 import { VolunteeringForm } from "../components/GetInvolved/VolunteeringForm";
 import { DonationForm } from "../components/GetInvolved/DonationForm";
 import { TestimonialForm } from "../components/GetInvolved/TestimonialForm";
+import { Volunteers } from "../components/Volunteers";
 export default function Getinvolved() {
   const [selected, setSelected] = useState(1);
 
@@ -54,10 +55,15 @@ export default function Getinvolved() {
           </a>
         </div>
 
-        {selected == 1 && <VolunteeringForm />}
+        {selected == 1 && (
+          <>
+            {" "}
+            <VolunteeringForm /> <Volunteers />{" "}
+          </>
+        )}
         {selected == 2 && <TestimonialForm />}
         {selected == 3 && <DonationForm />}
       </div>
-    </>
+    </> // TODO: Add Volunteers Cards
   );
 }

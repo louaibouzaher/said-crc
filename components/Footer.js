@@ -103,7 +103,10 @@ export const Footer = () => {
         <span className="text-yellow-500"> Social Media.</span>
       </div>
       <SocialMedia />
-      <div className="text-white text-sm py-2"> SAID NGO - 2021</div>
+      <div className="text-white text-sm py-2">
+        {" "}
+        SAID NGO - {new Date().getFullYear()}
+      </div>
     </div>
   );
   // TODO: Add partners logos

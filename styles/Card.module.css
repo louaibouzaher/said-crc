@@ -11,9 +11,7 @@
   filter: grayscale(1);
 }
 
-.delayà {
-  animation-delay: às;
-}
+
 .delay1 {
   animation-delay: 1s;
 }
@@ -22,7 +20,7 @@
 }
 .cardAnimation {
   animation-name: card;
-  animation-duration: 1s;
+  animation-duration: 500ms;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
