@@ -4,7 +4,10 @@ import styles from "../styles/Who.module.css";
 import styles1 from "../styles/Testimonials.module.css";
 import VisibilitySensor from "react-visibility-sensor";
 import { Statistics } from "./Who/Statistics";
+import axios from "axios";
+import { api } from "../configVars";
 export const Who = () => {
+  const [sections, setSections] = useState([]);
   const mission = [
     {
       id: 0,
@@ -25,23 +28,6 @@ export const Who = () => {
       src: "/assets/support.jpg",
     },
   ];
-  const section = [
-    {
-      name: "Events",
-      number: 15,
-      id: 1,
-    },
-    {
-      name: "Participants",
-      number: 300,
-      id: 2,
-    },
-    {
-      name: "Volunteers",
-      number: 40,
-      id: 3,
-    },
-  ];
   const onChange = (isVisible) => {
     if (isVisible) {
       ref.current.classList.add(styles.enterRight);
@@ -53,15 +39,33 @@ export const Who = () => {
     if (isVisible) {
       ref1.current.classList.add(styles.enterRight);
       ref2.current.classList.add(styles1.enterLeft);
-    } else {
-      ref1.current.classList.remove(styles.enterRight);
-      ref2.current.classList.remove(styles1.enterLeft);
     }
   };
   const ref = useRef();
   const ref1 = useRef();
   const ref2 = useRef();
-
+  useEffect(() => {
+    axios.get(api + "/statistics").then((response) => {
+      // console.log(response.data);
+      setSections([
+        {
+          name: "Events",
+          number: response.data.events,
+          id: 1,
+        },
+        {
+          name: "Participants",
+          number: response.data.participants,
+          id: 2,
+        },
+        {
+          name: "Volunteers",
+          number: response.data.volunteers,
+          id: 3,
+        },
+      ]);
+    });
+  }, []);
   return (
     <div className="w-full bg-blue-900 sm:px-32 px-4 py-20 flex flex-col items-center overflow-hidden">
       <VisibilitySensor partialVisibility={true} onChange={onChange}>
@@ -105,7 +109,7 @@ export const Who = () => {
           "w-full flex sm:flex-row flex-col justify-center items-stretch py-10"
         }
       >
-        {section.map((s) => (
+        {sections.map((s) => (
           <Statistics name={s.name} number={s.number} key={s.id} />
         ))}
       </div>
