@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "../../styles/Card.module.css";
 import VisibilitySensor from "react-visibility-sensor";
+import { api } from "../../configVars";
 
 export const Card = ({ p }) => {
   const onChange = () => {};
@@ -13,10 +14,10 @@ export const Card = ({ p }) => {
     >
       <div
         className={"my-3 mx-10 rounded-full shadow-lg " + styles.cardBg}
-        style={{ backgroundImage: "url(" + p.picture + ")" }}
+        style={{ backgroundImage: "url(" + api + p.image.url + ")" }}
       ></div>
       <h1 className="text-2xl text-blue-900 mt-3 text-center">{p.name}</h1>
-      <h1 className="text-xl text-blue-900 mb-3 text-center">{p.profession}</h1>
+      <h1 className="text-xl text-blue-900 mb-3 text-center">{p.title}</h1>
       <p className="text-sm text-gray-900">{p.description}</p>
     </div>
   );
