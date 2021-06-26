@@ -10,7 +10,7 @@ export const AboutSection = () => {
           to inform the public about the importance of early screening. The
           ultimate goal is to augment the total number of men and women being
           screened in the absence of any symptom starting at the age of 50.
-          <br />
+          <br /> 
           <br />
           We take part in health forums and conferences, distribute educational
           flyers, give informative lectures, and participate in talk shows on
