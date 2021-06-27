@@ -3,12 +3,12 @@ import { TestimonialsCard } from "./TestimonialsCard";
 import axios from "axios";
 import { api } from "../../configVars";
 export const Testimonials = () => {
-  const [testimonials, settesTimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
     axios.get(api + "/newsroom-stories").then((response) => {
       // console.log(response.data);
-      settesTimonials(response.data);
+      setTestimonials(response.data);
     });
   }, []);
 
