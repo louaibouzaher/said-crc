@@ -1,25 +1,19 @@
-import React, { useState, useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "../../styles/Interviews.module.css";
 import VisibilitySensor from "react-visibility-sensor";
+import axios from "axios";
+import { api } from "../../configVars";
 
 export const Interviews = () => {
-  const interviews = [
-    {
-      video: "https://www.youtube.com/embed/QHb_Brp0WnI",
-      title: "Random title",
-      description: "Random Text",
-    },
-    {
-      video: "https://www.youtube.com/embed/zDZj1oNVXQY",
-      title: "Random title",
-      description: "Random Text",
-    },
-    {
-      video: "https://www.youtube.com/embed/q3VUltqMX1U",
-      title: "Random title",
-      description: "Random Text",
-    },
-  ];
+ 
+  const [interviews, setInterviews] = useState([]);
+
+  useEffect(() => {
+    axios.get(api + "/interviews").then((response) => {
+      // console.log(response.data);
+      setInterviews(response.data);
+    });
+  }, []);
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
@@ -66,7 +60,9 @@ export const Interviews = () => {
         </VisibilitySensor>
         <div className="flex justify-center  items-center row-start-2 row-end-4 bg-blue-900 rounded-md p-4  shadow-2xl">
           <div className="p-10 w-full flex flex-col justify-center items-center">
-            <div className="text-white text-4xl py-6 text-center">Check Our Interviews</div>
+            <div className="text-white text-4xl py-6 text-center">
+              Check Our Interviews
+            </div>
             <div className="text-white text-lg text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
               nostrum eum ipsa culpa molestias quibusdam fugiat labore
@@ -106,12 +102,16 @@ export const Interviews = () => {
 
 const Video = ({ v }) => {
   return (
-    <iframe
-      className="w-full h-full"
-      src={v.video}
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
+    <>
+      {v && (
+        <iframe
+          className="w-full h-full"
+          src={v.link}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
+    </>
   );
 };

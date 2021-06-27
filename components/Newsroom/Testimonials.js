@@ -1,37 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TestimonialsCard } from "./TestimonialsCard";
-
+import axios from "axios";
+import { api } from "../../configVars";
 export const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "person1",
-      description:
-        "Random Text Random Text Random Text Random Text Random Text ",
-      link: "/audio/person1.mp3",
-      image: "/assets/testimonial1.jpg",
-    },
-    {
-      name: "person2",
-      description:
-        "Random Text Random Text Random Text Random Text Random Text ",
-      link: "/audio/person1.mp3",
-      image: "/assets/testimonial1.jpg",
-    },
-    {
-      name: "person3",
-      description:
-        "Random Text Random Text Random Text Random Text Random Text ",
-      link: "/audio/person1.mp3",
-      image: "/assets/testimonial1.jpg",
-    },
-    {
-      name: "person4",
-      description:
-        "Random Text Random Text Random Text Random Text Random Text ",
-      link: "/audio/person1.mp3",
-      image: "/assets/testimonial1.jpg",
-    },
-  ];
+  const [testimonials, settesTimonials] = useState([]);
+
+  useEffect(() => {
+    axios.get(api + "/newsroom-stories").then((response) => {
+      // console.log(response.data);
+      settesTimonials(response.data);
+    });
+  }, []);
+
   return (
     <div
       className="w-full sm:h-screen py-20 flex sm:flex-row flex-col items-center justify-center bg-blue-900 overflow-hidden"

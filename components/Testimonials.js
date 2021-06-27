@@ -3,6 +3,8 @@ import styles from "../styles/Testimonials.module.css";
 import { Testimonial } from "./Testimonials/Testimonial";
 import axios from "axios";
 import { api } from "../configVars";
+
+
 export const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
 

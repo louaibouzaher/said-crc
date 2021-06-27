@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Hero } from "../components/Hero";
+import { JoinUs } from "../components/JoinUs";
 import { Testimonials } from "../components/Testimonials";
 import { Who } from "../components/Who";
 import styles from "../styles/Home.module.css";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Who />
       <Testimonials />
+      <JoinUs />
     </div>
   );
 }
