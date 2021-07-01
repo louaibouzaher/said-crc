@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import SocialMedia from "./SocialMedia";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { api } from "../configVars";
 import {
   faMapMarkerAlt,
   faPhoneAlt,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 library.add(faMapMarkerAlt, faPhoneAlt, faEnvelope);
 export const Footer = () => {
-  const [Contact, setContact] = useState({
+  const [contact, setContact] = useState({
     email: "",
     message: "",
   });
@@ -19,18 +21,14 @@ export const Footer = () => {
     });
   };
   const handleSend = () => {
-    //   if (Contact.email != "" && Contact.message != "") {
-    //     const messagesRef = database.ref("contactmessages");
-    //     const newMessage = messagesRef.push();
-    //     newMessage.set({
-    //       email: Contact.email,
-    //       message: Contact.message,
-    //       time: JSON.stringify(new Date()),
-    //     });
-    //     alert("Message sent🚀 Thank you!");
-    //   } else {
-    //     alert("Please provide an email and a message before sending!");
-    //   }
+    axios
+      .post(api + "/contact-uses", contact)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (

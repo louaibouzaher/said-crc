@@ -1,22 +1,20 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { api } from "../configVars";
 import styles from "../styles/About.module.css";
 export const AboutSection = () => {
+  const [content, setContent] = useState({});
+  useEffect(() => {
+    axios.get(api + "/about-images").then((response) => {
+      // console.log(response.data);
+      setContent(response.data);
+    });
+  }, []);
   return (
     <div className="w-full sm:h-screen sm:p-12 p-5 pb-20 pt-20 flex sm:flex-row flex-col sm:justify-center sm:items-center bg-blue-900 overflow-x-hidden">
       <div className="sm:w-1/2 flex flex-col justify-center items-start p-4">
         <div className="text-6xl py-3  text-yellow-500">About</div>
-        <div className="text-white">
-          The SAID NGO carries out diverse educational events throughout the
-          year to increase the awareness about colorectal cancer in Lebanon and
-          to inform the public about the importance of early screening. The
-          ultimate goal is to augment the total number of men and women being
-          screened in the absence of any symptom starting at the age of 50.
-          <br /> 
-          <br />
-          We take part in health forums and conferences, distribute educational
-          flyers, give informative lectures, and participate in talk shows on
-          the local television and radio stations. Securing funds and sponsors
-          to help those who cannot afford to go for early screening.
-        </div>
+        <div className="text-white">{content.aboutDescription}</div>
       </div>
       <div className="flex flex-row sm:w-3/5 w-full mt-10">
         <div
@@ -29,7 +27,7 @@ export const AboutSection = () => {
           }}
           delay={1}
         >
-          <img src="/assets/bgHero.jpg" alt="" />
+          <img src={content.Image1 ? api + content.Image1.url : ""} alt="" />
         </div>
         <div
           className={
@@ -42,7 +40,7 @@ export const AboutSection = () => {
           }}
           delay={5}
         >
-          <img src="/assets/bgHero.jpg" alt="" />
+          <img src={content.Image2 ? api + content.Image2.url : ""} alt="" />
         </div>
         <div
           className={
@@ -54,7 +52,7 @@ export const AboutSection = () => {
           }}
           delay={3}
         >
-          <img src="/assets/bgHero.jpg" alt="" />
+          <img src={content.Image3 ? api + content.Image3.url : ""} alt="" />
         </div>
       </div>
     </div>
