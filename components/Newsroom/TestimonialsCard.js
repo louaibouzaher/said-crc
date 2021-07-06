@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../../styles/Newsroom.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { api } from "../../configVars";
 
 export const TestimonialsCard = ({ person }) => {
   return (
@@ -11,7 +10,7 @@ export const TestimonialsCard = ({ person }) => {
       target="_blank"
       className="p-1 w-full flex flex-col justify-center items-center"
     >
-      <CardImage link={api + person.Image[0].url} />
+      <CardImage link={person.Image[0].url} />
       <h1 className="text-white text-xl py-1">{person.name}</h1>
       <p className="w-1/2 text-white text-sm text-center">
         {person.description}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SocialMedia from "./SocialMedia";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 library.add(faMapMarkerAlt, faPhoneAlt, faEnvelope);
 export const Footer = () => {
+  const [contactInfo, setContactInfo] = useState({});
   const [contact, setContact] = useState({
     email: "",
     message: "",
@@ -24,12 +25,19 @@ export const Footer = () => {
     axios
       .post(api + "/contact-uses", contact)
       .then(function (response) {
-        console.log(response);
+        alert("Message Successfully Sent! \n We will get back to you soon.");
       })
       .catch(function (error) {
         console.log(error);
       });
   };
+
+  useEffect(() => {
+    axios.get(api + "/contact").then((response) => {
+      // console.log(response.data);
+      setContactInfo(response.data);
+    });
+  }, []);
 
   return (
     <div
@@ -53,7 +61,7 @@ export const Footer = () => {
               size="2x"
               className="m-3  text-white"
             />
-            <div className="text-white">+961 3 458 476</div>
+            <div className="text-white">{contactInfo.phoneNumber}</div>
           </div>
           <div className="flex flex-row items-center">
             <FontAwesomeIcon
@@ -61,7 +69,7 @@ export const Footer = () => {
               size="2x"
               className="m-3  text-white"
             />
-            <div className="text-white">hananimer@saidcrc.org</div>
+            <div className="text-white">{contactInfo.email}</div>
           </div>
         </div>
         <div className="flex-grow flex flex-col justify-start p-5">

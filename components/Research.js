@@ -8,7 +8,7 @@ export const ResearchPapers = () => {
 
   useEffect(() => {
     axios.get(api + "/research-pages").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setPapers(response.data);
     });
   }, []);

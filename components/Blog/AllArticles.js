@@ -7,7 +7,7 @@ export const AllArticles = () => {
 
   useEffect(() => {
     axios.get(api + "/articles").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setArticles(response.data);
     });
   }, []);

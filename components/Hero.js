@@ -9,7 +9,7 @@ export const Hero = () => {
 
   useEffect(() => {
     axios.get(api + "/main-page-cover").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setContent(response.data);
     });
   }, []);
