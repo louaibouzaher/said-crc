@@ -20,7 +20,7 @@ export const Hero = () => {
         className={"w-full p-0 h-screen " + `${styles.backgroundImage}`}
         style={{
           backgroundImage: content.image
-            ? "url(" + api + content.image[0].url + ")"
+            ? "url(" + content.image[0].url + ")"
             : "linear-gradient(90deg,#1E3A8A,#1E3A8A)",
         }}
       >

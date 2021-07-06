@@ -9,7 +9,7 @@ export const JoinUs = () => {
       <ParallaxProvider>
         <Parallax
           className="h-screen w-full flex justify-center items-center "
-          x={[-20, 20]}
+          x={[-30, 30]}
           tagOuter="figure"
         >
           <div className="sm:text-6xl text-3xl px-2 my-4 pt-10 text-white text-center">

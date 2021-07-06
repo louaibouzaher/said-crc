@@ -27,7 +27,7 @@ export const AboutSection = () => {
           }}
           delay={1}
         >
-          <img src={content.Image1 ? api + content.Image1.url : ""} alt="" />
+          <img src={content.Image1 ?  content.Image1.url : ""} alt="" />
         </div>
         <div
           className={
@@ -40,7 +40,7 @@ export const AboutSection = () => {
           }}
           delay={5}
         >
-          <img src={content.Image2 ? api + content.Image2.url : ""} alt="" />
+          <img src={content.Image2 ? content.Image2.url : ""} alt="" />
         </div>
         <div
           className={
@@ -52,7 +52,7 @@ export const AboutSection = () => {
           }}
           delay={3}
         >
-          <img src={content.Image3 ? api + content.Image3.url : ""} alt="" />
+          <img src={content.Image3 ? content.Image3.url : ""} alt="" />
         </div>
       </div>
     </div>

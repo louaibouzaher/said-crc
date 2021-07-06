@@ -25,7 +25,7 @@ export const Testimonial = ({ t }) => {
         }
       >
         <img
-          src={api + t.image[0].url}
+          src={t.image[0].url}
           alt=""
           className="sm:w-1/5 w-1/2 rounded-full shadow-2xl"
         />
