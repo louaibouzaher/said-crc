@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { api } from "../../configVars";
 
 export const Card = ({ p }) => {
-  const onChange = () => {};
+  const onChange = () => { };
   return (
     <div
       className={
@@ -14,7 +14,7 @@ export const Card = ({ p }) => {
     >
       <div
         className={"my-3 mx-10 rounded-full shadow-lg " + styles.cardBg}
-        style={{ backgroundImage: "url(" + api + p.image.url + ")" }}
+        style={{ backgroundImage: "url(" + p.image.url + ")" }}
       ></div>
       <h1 className="text-2xl text-blue-900 mt-3 text-center">{p.name}</h1>
       <h1 className="text-xl text-blue-900 mb-3 text-center">{p.title}</h1>

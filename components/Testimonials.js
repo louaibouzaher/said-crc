@@ -10,7 +10,6 @@ export const Testimonials = () => {
 
   useEffect(() => {
     axios.get(api + "/testimonials").then((response) => {
-      // console.log(response.data);
       setTestimonials(response.data);
     });
   }, []);
