@@ -11,7 +11,7 @@ import {
 import axios from "axios";
 library.add(faMapMarkerAlt, faPhoneAlt, faEnvelope);
 export const Footer = () => {
-  const [contact, setContact] = useState({
+  const [contact, setContact] = useState({ //watch video about usetstate
     email: "",
     message: "",
   });
@@ -20,9 +20,9 @@ export const Footer = () => {
       return { ...p, [e.target.name]: e.target.value };
     });
   };
-  const handleSend = () => {
+  const handleSend = () => { //sending the form to the backend
     axios
-      .post(api + "/contact-uses", contact)
+      .post(api + "/contact-uses", contact) //posting to strapi
       .then(function (response) {
         console.log(response);
       })
