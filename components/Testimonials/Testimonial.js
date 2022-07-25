@@ -19,13 +19,13 @@ export const Testimonial = ({ t }) => {
       <div
         ref={ref}
         className={
-            ((t.id % 2 == 1)
+          ((t.id % 2 == 1)
             ? "sm:flex-row "
-            : "sm:flex-row-reverse " ) + ` sm:w-3/4 flex flex-col justify-center items-center sm:px-10  pt-10 flex-nowrap `
+            : "sm:flex-row-reverse ") + ` sm:w-3/4 flex flex-col justify-center items-center sm:px-10  pt-10 flex-nowrap `
         }
       >
         <img
-          src={api + t.image[0].url}
+          src={t.image[0].url}
           alt=""
           className="sm:w-1/5 w-1/2 rounded-full shadow-2xl"
         />
