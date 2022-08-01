@@ -8,7 +8,7 @@ import Markdown from "markdown-to-jsx";
 const Article = ({ article }) => {
   const router = useRouter();
   const { id } = router.query;
-  console.log(article);
+  // console.log(article);
   return (
     <>
       <Head>
@@ -70,7 +70,7 @@ export default Article;
 export async function getStaticProps({ params }) {
   const res = await fetch(api + `/articles/${params.id}`);
   const article = await res.json();
-  console.log(article);
+  // console.log(article);
   if (!article) {
     return {
       notFound: true,

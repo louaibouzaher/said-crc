@@ -12,7 +12,7 @@ export const VolunteerCard = ({ p }) => {
     >
       <div
         className={"my-3 mx-10 rounded-full shadow-lg " + styles.cardBg}
-        style={{ backgroundImage: "url(" + p.picture.url + ")" }}
+        style={{ backgroundImage: "url(" + p?.picture?.url + ")" }}
       ></div>
       <h1 className="text-2xl text-blue-900 mt-3 text-center">{p.Name}</h1>
       <h1 className="text-xl text-blue-900 mb-3 text-center">{p.profession}</h1>

@@ -33,7 +33,7 @@ export const TestimonialForm = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         data = data.map((c) => {
           return { value: c.dial_code, label: c.dial_code + " " + c.name };
         });
