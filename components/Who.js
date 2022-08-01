@@ -46,7 +46,7 @@ export const Who = () => {
   const ref2 = useRef();
   useEffect(() => {
     axios.get(api + "/statistics").then((response) => {
-      // console.log(response.data);
+      console.log(response.data);
       setSections([
         {
           name: "Events",
@@ -54,12 +54,12 @@ export const Who = () => {
           id: 1,
         },
         {
-          name: "Participants",
+          name: "Registered for F.I.T", //name of the label
           number: response.data.participants,
           id: 2,
         },
         {
-          name: "Volunteers",
+          name: "Positive Rate",
           number: response.data.volunteers,
           id: 3,
         },
