@@ -13,7 +13,7 @@ export const FeaturedArticle = () => {
 
   useEffect(() => {
     axios.get(api + "/featured-article").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setContent(response.data);
     });
   }, []);

@@ -24,10 +24,10 @@ export const Footer = () => {
     axios
       .post(api + "/contact-uses", contact) //posting to strapi
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
   };
 

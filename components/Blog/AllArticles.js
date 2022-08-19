@@ -7,11 +7,11 @@ export const AllArticles = () => {
 
   useEffect(() => {
     axios.get(api + "/articles").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setArticles(response.data);
     });
   }, []);
- 
+
   return (
     <div className="w-full p-10 flex sm:flex-row flex-col justify-center items-stretch flex-wrap  ">
       {articles.map((a) => (

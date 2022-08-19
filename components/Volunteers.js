@@ -9,7 +9,7 @@ export const Volunteers = () => {
 
   useEffect(() => {
     axios.get(api + "/volunteers").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setVolunteers(response.data);
     });
   }, []);

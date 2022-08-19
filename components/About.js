@@ -6,7 +6,7 @@ export const AboutSection = () => {
   const [content, setContent] = useState({});
   useEffect(() => {
     axios.get(api + "/about-images").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setContent(response.data);
     });
   }, []);
@@ -27,7 +27,7 @@ export const AboutSection = () => {
           }}
           delay={1}
         >
-          <img src={content.Image1 ? content.Image1.url : ""} alt="" />
+          <img src={content?.Image1 ? content?.Image1?.url : ""} alt="" />
         </div>
         <div
           className={
@@ -40,7 +40,7 @@ export const AboutSection = () => {
           }}
           delay={5}
         >
-          <img src={content.Image2 ? + content.Image2.url : ""} alt="" />
+          <img src={content?.Image2 ? content?.Image2?.url : ""} alt="" />
         </div>
         <div
           className={
@@ -52,7 +52,7 @@ export const AboutSection = () => {
           }}
           delay={3}
         >
-          <img src={content.Image3 ? content.Image3.url : ""} alt="" />
+          <img src={content?.Image3 ? content?.Image3?.url : ""} alt="" />
         </div>
       </div>
     </div>
