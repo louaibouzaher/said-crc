@@ -16,7 +16,7 @@ export const Founders = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
       <div className="sm:text-6xl  text-3xl px-4 pt-10 text-blue-900">
-        Meet The Founders.
+        Board & Members
       </div>
       <div
         className={

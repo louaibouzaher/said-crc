@@ -105,6 +105,7 @@ export const Footer = () => {
         {" "}
         SAID NGO - {new Date().getFullYear()}
       </div>
+      <div>adding partners</div>
     </div>
   );
   // TODO: Add partners logos
